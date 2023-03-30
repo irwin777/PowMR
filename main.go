@@ -27,7 +27,6 @@ type status struct {
 	OutputActivePower       int
 	OutputApparntPower      int
 	OutputPower             int
-	PVBAT                   float64
 	ChargingCurrent         int
 	PVinputCurrent          int
 	PVinputVoltage          float64
@@ -175,15 +174,13 @@ func getStatus() {
 	lastStatus.OutputApparntPower, _ = strconv.Atoi(OutputApparntPower)
 	OutputPower := ss[6]
 	lastStatus.OutputPower, _ = strconv.Atoi(OutputPower)
-	PVBAT := ss[8]
-	lastStatus.PVBAT, _ = strconv.ParseFloat(PVBAT, 32)
 	ChargingCurrent := ss[9]
 	lastStatus.ChargingCurrent, _ = strconv.Atoi(ChargingCurrent)
 	PVInputCurrent := ss[12]
 	lastStatus.PVinputCurrent, _ = strconv.Atoi(PVInputCurrent)
 	PVInputVoltage := ss[13]
 	lastStatus.PVinputVoltage, _ = strconv.ParseFloat(PVInputVoltage, 32)
-	BatteryVoltage := ss[14]
+	BatteryVoltage := ss[8]
 	lastStatus.BatteryVoltage, _ = strconv.ParseFloat(BatteryVoltage, 32)
 	BatteryDischargeCurrent := ss[15]
 	lastStatus.BatteryDischargeCurrent, _ = strconv.Atoi(BatteryDischargeCurrent)
