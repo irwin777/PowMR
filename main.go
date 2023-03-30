@@ -55,6 +55,7 @@ func init() {
 		log.Println(err)
 	}
 	fmt.Println("QVFW2\t", rcv)
+
 	_, err = os.Stat("db")
 	if err != nil {
 		err := os.Mkdir("db", os.ModePerm)
@@ -66,7 +67,6 @@ func init() {
 	if err != nil {
 		log.Fatalln("failed to open database")
 	}
-
 	err = Db.AutoMigrate(&status{})
 	if err != nil {
 		log.Println(err)
@@ -91,7 +91,7 @@ func getData(rq string) (string, error) {
 	}
 	serial, err := serial.OpenPort(&config)
 	if err != nil {
-		log.Fatalln(err)
+		return "", err
 	}
 	defer serial.Close()
 	data := []byte(rq)
