@@ -3,6 +3,7 @@ package main
 import (
 	"bufio"
 	"encoding/binary"
+	"encoding/json"
 	"fmt"
 	"log"
 	"os"
@@ -160,8 +161,6 @@ func getStatus() {
 		return
 	}
 	ss := strings.Split(rcv, " ")
-	fmt.Println("QPIGS ", ss)
-
 	ACvoltage := ss[0]
 	lastStatus.ACvoltage, _ = strconv.ParseFloat(ACvoltage, 32)
 	ACfrequency := ss[1]
@@ -194,4 +193,6 @@ func getStatus() {
 	if tx.Error != nil {
 		log.Println(tx.Error)
 	}
+	jb, _ := json.MarshalIndent(lastStatus, "", " ")
+	fmt.Print(string(jb))
 }
