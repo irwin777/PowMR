@@ -6,19 +6,19 @@ import (
 )
 
 func graphACf() {
-	ACf15mcom := exec.Command("/usr/bin/rrdtool", "graph",
-		"html/rrd/ACf15m.png",
+	ACf30mcom := exec.Command("/usr/bin/rrdtool", "graph",
+		"html/rrd/ACf30m.png",
 		"-enow",
-		"-snow-15m",
+		"-snow-30m",
 		"-w600",
 		"-h300",
-		"-tACf_15_m",
+		"-tACf_30_m",
 		"DEF:ACfi=db/ACf.rrd:Fi:AVERAGE",
 		"DEF:ACfo=db/ACf.rrd:Fo:AVERAGE",
 		"LINE1:ACfi#0000FF:In",
 		"LINE1:ACfo#00FF00:Out",
 	)
-	err := ACf15mcom.Run()
+	err := ACf30mcom.Run()
 	if err != nil {
 		log.Println(err)
 	}

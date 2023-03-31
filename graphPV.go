@@ -6,19 +6,19 @@ import (
 )
 
 func graphPV() {
-	pv15mcom := exec.Command("/usr/bin/rrdtool", "graph",
-		"html/rrd/PV15m.png",
+	pv30mcom := exec.Command("/usr/bin/rrdtool", "graph",
+		"html/rrd/PV30m.png",
 		"-enow",
-		"-snow-15m",
+		"-snow-30m",
 		"-w600",
 		"-h300",
-		"-tPV_15_m",
+		"-tPV_30_m",
 		"DEF:PVV=db/PV.rrd:V:AVERAGE",
 		"DEF:PVA=db/PV.rrd:A:AVERAGE",
 		"LINE1:PVV#0000FF:V",
 		"LINE1:PVA#00FF00:A",
 	)
-	err := pv15mcom.Run()
+	err := pv30mcom.Run()
 	if err != nil {
 		log.Println(err)
 	}

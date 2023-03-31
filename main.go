@@ -201,6 +201,9 @@ func main() {
 		go graphOPa()
 		go graphOPp()
 		go graphPV()
+		go graphBC()
+		go graphBv()
+		go graphBc()
 	}
 }
 

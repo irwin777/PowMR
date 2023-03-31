@@ -6,19 +6,19 @@ import (
 )
 
 func graphOPa() {
-	OPa15mcom := exec.Command("/usr/bin/rrdtool", "graph",
-		"html/rrd/OPa15m.png",
+	OPa30mcom := exec.Command("/usr/bin/rrdtool", "graph",
+		"html/rrd/OPa30m.png",
 		"-enow",
-		"-snow-15m",
+		"-snow-30m",
 		"-w600",
 		"-h300",
-		"-tOPa_15_m",
+		"-tOPa_30_m",
 		"DEF:OPac=db/OPa.rrd:Ac:AVERAGE",
 		"DEF:OPap=db/OPa.rrd:Ap:AVERAGE",
 		"LINE1:OPac#0000FF:ActivePower",
 		"LINE1:OPap#00FF00:ApparntPower",
 	)
-	err := OPa15mcom.Run()
+	err := OPa30mcom.Run()
 	if err != nil {
 		log.Println(err)
 	}

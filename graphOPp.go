@@ -6,17 +6,17 @@ import (
 )
 
 func graphOPp() {
-	OPp15mcom := exec.Command("/usr/bin/rrdtool", "graph",
-		"html/rrd/OPp15m.png",
+	OPp30mcom := exec.Command("/usr/bin/rrdtool", "graph",
+		"html/rrd/OPp30m.png",
 		"-enow",
-		"-snow-15m",
+		"-snow-30m",
 		"-w600",
 		"-h300",
-		"-tOPp_15_m",
+		"-tOPp_30_m",
 		"DEF:OPp=db/OPp.rrd:Op:AVERAGE",
 		"LINE1:OPp#00FF00:%",
 	)
-	err := OPp15mcom.Run()
+	err := OPp30mcom.Run()
 	if err != nil {
 		log.Println(err)
 	}

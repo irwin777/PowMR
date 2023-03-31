@@ -6,19 +6,19 @@ import (
 )
 
 func graphACv() {
-	ACv15mcom := exec.Command("/usr/bin/rrdtool", "graph",
-		"html/rrd/ACv15m.png",
+	ACv30mcom := exec.Command("/usr/bin/rrdtool", "graph",
+		"html/rrd/ACv30m.png",
 		"-enow",
-		"-snow-15m",
+		"-snow-30m",
 		"-w600",
 		"-h300",
-		"-tACv_15_m",
+		"-tACv_30_m",
 		"DEF:ACvi=db/ACv.rrd:Vi:AVERAGE",
 		"DEF:ACvo=db/ACv.rrd:Vo:AVERAGE",
 		"LINE1:ACvi#0000FF:In",
 		"LINE1:ACvo#00FF00:Out",
 	)
-	err := ACv15mcom.Run()
+	err := ACv30mcom.Run()
 	if err != nil {
 		log.Println(err)
 	}
