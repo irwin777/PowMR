@@ -57,6 +57,23 @@ func graphOPa() {
 	if err != nil {
 		log.Println(err)
 	}
+	OPa1dcom := exec.Command("/usr/bin/rrdtool", "graph",
+		"html/rrd/OPa1d.png",
+		"-enow",
+		"-snow-1d",
+		"-w600",
+		"-h300",
+		"-tOutPower",
+		"-vVA/W",
+		"DEF:OPac=db/OPa.rrd:Ac:AVERAGE",
+		"DEF:OPap=db/OPa.rrd:Ap:AVERAGE",
+		"LINE1:OPac#0000FF:ActivePower",
+		"LINE1:OPap#00FF00:ApparntPower",
+	)
+	err = OPa1dcom.Run()
+	if err != nil {
+		log.Println(err)
+	}
 	OPa1wcom := exec.Command("/usr/bin/rrdtool", "graph",
 		"html/rrd/OPa1w.png",
 		"-enow",

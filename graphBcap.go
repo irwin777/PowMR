@@ -51,6 +51,21 @@ func graphBc() {
 	if err != nil {
 		log.Println(err)
 	}
+	Bc1dcom := exec.Command("/usr/bin/rrdtool", "graph",
+		"html/rrd/Bc1d.png",
+		"-enow",
+		"-snow-1d",
+		"-w600",
+		"-h300",
+		"-tBatteryCapacity",
+		"-vPercent",
+		"DEF:Bc=db/Bc.rrd:Bc:AVERAGE",
+		"LINE1:Bc#00FF00:%",
+	)
+	err = Bc1dcom.Run()
+	if err != nil {
+		log.Println(err)
+	}
 	Bc1wcom := exec.Command("/usr/bin/rrdtool", "graph",
 		"html/rrd/Bc1w.png",
 		"-enow",

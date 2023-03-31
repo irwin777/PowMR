@@ -5,5 +5,5 @@ install:build
 	scp bin/ipwm3000 root@172.20.20.15:/root/PowMR/
 	ssh root@172.20.20.15 "systemctl start ipwm3000"
 	ssh root@172.20.20.15 "systemctl status ipwm3000"
-html:
-	scp html/index.html root@172.20.20.15:/root/PowMR/html/
+www:
+	scp html/*.html root@172.20.20.15:/root/PowMR/html/

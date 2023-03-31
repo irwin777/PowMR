@@ -57,6 +57,23 @@ func graphACv() {
 	if err != nil {
 		log.Println(err)
 	}
+	ACv1dcom := exec.Command("/usr/bin/rrdtool", "graph",
+		"html/rrd/ACv1d.png",
+		"-enow",
+		"-snow-1d",
+		"-w600",
+		"-h300",
+		"-tACVoltage",
+		"-vVolt",
+		"DEF:ACvi=db/ACv.rrd:Vi:AVERAGE",
+		"DEF:ACvo=db/ACv.rrd:Vo:AVERAGE",
+		"LINE1:ACvi#0000FF:In",
+		"LINE1:ACvo#00FF00:Out",
+	)
+	err = ACv1dcom.Run()
+	if err != nil {
+		log.Println(err)
+	}
 	ACv1wcom := exec.Command("/usr/bin/rrdtool", "graph",
 		"html/rrd/ACv1w.png",
 		"-enow",

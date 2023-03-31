@@ -57,6 +57,23 @@ func graphACf() {
 	if err != nil {
 		log.Println(err)
 	}
+	ACf1dcom := exec.Command("/usr/bin/rrdtool", "graph",
+		"html/rrd/ACf1d.png",
+		"-enow",
+		"-snow-1d",
+		"-w600",
+		"-h300",
+		"-ACFreqmency",
+		"-vHz",
+		"DEF:ACfi=db/ACf.rrd:Fi:AVERAGE",
+		"DEF:ACfo=db/ACf.rrd:Fo:AVERAGE",
+		"LINE1:ACfi#0000FF:In",
+		"LINE1:ACfo#00FF00:Out",
+	)
+	err = ACf1dcom.Run()
+	if err != nil {
+		log.Println(err)
+	}
 	ACf1wcom := exec.Command("/usr/bin/rrdtool", "graph",
 		"html/rrd/ACf1w.png",
 		"-enow",

@@ -51,6 +51,21 @@ func graphOPp() {
 	if err != nil {
 		log.Println(err)
 	}
+	OPp1dcom := exec.Command("/usr/bin/rrdtool", "graph",
+		"html/rrd/OPp1d.png",
+		"-enow",
+		"-snow-1d",
+		"-w600",
+		"-h300",
+		"-tOutPowerProcent",
+		"-vPercent",
+		"DEF:OPp=db/OPp.rrd:Op:AVERAGE",
+		"LINE1:OPp#00FF00:%",
+	)
+	err = OPp1dcom.Run()
+	if err != nil {
+		log.Println(err)
+	}
 	OPp1wcom := exec.Command("/usr/bin/rrdtool", "graph",
 		"html/rrd/OPp1w.png",
 		"-enow",

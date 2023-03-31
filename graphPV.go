@@ -57,6 +57,23 @@ func graphPV() {
 	if err != nil {
 		log.Println(err)
 	}
+	pv1dcom := exec.Command("/usr/bin/rrdtool", "graph",
+		"html/rrd/PV1d.png",
+		"-enow",
+		"-snow-1d",
+		"-w600",
+		"-h300",
+		"-tPV",
+		"-vV/A",
+		"DEF:PVV=db/PV.rrd:V:AVERAGE",
+		"DEF:PVA=db/PV.rrd:A:AVERAGE",
+		"LINE1:PVV#0000FF:V",
+		"LINE1:PVA#00FF00:A",
+	)
+	err = pv1dcom.Run()
+	if err != nil {
+		log.Println(err)
+	}
 	pv1wcom := exec.Command("/usr/bin/rrdtool", "graph",
 		"html/rrd/PV1w.png",
 		"-enow",
