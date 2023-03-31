@@ -31,6 +31,7 @@ var (
 )
 
 func init() {
+	log.Println("INIT")
 	rcv, err := getData("QID")
 	if err != nil {
 		log.Println(err)
@@ -47,6 +48,7 @@ func init() {
 	}
 	fmt.Println("QVFW2\t", rcv)
 
+	fmt.Println("Check db dir.")
 	_, err = os.Stat("db")
 	if err != nil {
 		err := os.Mkdir("db", os.ModePerm)
@@ -55,12 +57,13 @@ func init() {
 		}
 	}
 
+	fmt.Println("Check ACv file.")
 	_, err = os.Stat(ACv)
 	if err != nil {
-		cmd := exec.Command("rrdtool", "create", ACv, "--step 60",
+		cmd := exec.Command("/usr/bin/rrdtool", "create", ACv, "--step", "60",
 			"DS:Vi:GAUGE:120:0:250",
 			"DS:Vo:GAUGE:120:0:250",
-			"RRA:AVERAGE:0.5:1:15",
+			"RRA:AVERAGE:0.5:1:1440",
 			"RRA:AVERAGE:0.5:10:144",
 			"RRA:AVERAGE:0.5:60:168",
 			"RRA:AVERAGE:0.5:360:87600",
@@ -71,12 +74,13 @@ func init() {
 		}
 	}
 
+	fmt.Println("Check ACf file.")
 	_, err = os.Stat(ACf)
 	if err != nil {
-		cmd := exec.Command("rrdtool", "create", ACf, "--step 60",
+		cmd := exec.Command("/usr/bin/rrdtool", "create", ACf, "--step", "60",
 			"DS:Fi:GAUGE:120:0:60",
 			"DS:Fo:GAUGE:120:0:60",
-			"RRA:AVERAGE:0.5:1:15",
+			"RRA:AVERAGE:0.5:1:1440",
 			"RRA:AVERAGE:0.5:10:144",
 			"RRA:AVERAGE:0.5:60:168",
 			"RRA:AVERAGE:0.5:360:87600",
@@ -87,12 +91,13 @@ func init() {
 		}
 	}
 
+	fmt.Println("Check OPa file.")
 	_, err = os.Stat(OPa)
 	if err != nil {
-		cmd := exec.Command("rrdtool", "create", OPa, "--step 60",
+		cmd := exec.Command("/usr/bin/rrdtool", "create", OPa, "--step", "60",
 			"DS:Ac:GAUGE:120:0:U",
 			"DS:Ap:GAUGE:120:0:U",
-			"RRA:AVERAGE:0.5:1:15",
+			"RRA:AVERAGE:0.5:1:1440",
 			"RRA:AVERAGE:0.5:10:144",
 			"RRA:AVERAGE:0.5:60:168",
 			"RRA:AVERAGE:0.5:360:87600",
@@ -103,11 +108,12 @@ func init() {
 		}
 	}
 
+	fmt.Println("Check OPp file.")
 	_, err = os.Stat(OPp)
 	if err != nil {
-		cmd := exec.Command("rrdtool", "create", OPp, "--step 60",
+		cmd := exec.Command("/usr/bin/rrdtool", "create", OPp, "--step", "60",
 			"DS:Op:GAUGE:120:0:100",
-			"RRA:AVERAGE:0.5:1:15",
+			"RRA:AVERAGE:0.5:1:1440",
 			"RRA:AVERAGE:0.5:10:144",
 			"RRA:AVERAGE:0.5:60:168",
 			"RRA:AVERAGE:0.5:360:87600",
@@ -118,12 +124,13 @@ func init() {
 		}
 	}
 
+	fmt.Println("Check PV file.")
 	_, err = os.Stat(PV)
 	if err != nil {
-		cmd := exec.Command("rrdtool", "create", PV, "--step 60",
+		cmd := exec.Command("/usr/bin/rrdtool", "create", PV, "--step", "60",
 			"DS:V:GAUGE:120:0:50",
 			"DS:A:GAUGE:120:0:25",
-			"RRA:AVERAGE:0.5:1:15",
+			"RRA:AVERAGE:0.5:1:1440",
 			"RRA:AVERAGE:0.5:10:144",
 			"RRA:AVERAGE:0.5:60:168",
 			"RRA:AVERAGE:0.5:360:87600",
@@ -134,12 +141,13 @@ func init() {
 		}
 	}
 
+	fmt.Println("Check BC file.")
 	_, err = os.Stat(BC)
 	if err != nil {
-		cmd := exec.Command("rrdtool", "create", BC, "--step 60",
+		cmd := exec.Command("/usr/bin/rrdtool", "create", BC, "--step", "60",
 			"DS:Bc:GAUGE:120:0:U",
 			"DS:Bd:GAUGE:120:0:U",
-			"RRA:AVERAGE:0.5:1:15",
+			"RRA:AVERAGE:0.5:1:1440",
 			"RRA:AVERAGE:0.5:10:144",
 			"RRA:AVERAGE:0.5:60:168",
 			"RRA:AVERAGE:0.5:360:87600",
@@ -150,11 +158,12 @@ func init() {
 		}
 	}
 
+	fmt.Println("Check Bv file.")
 	_, err = os.Stat(Bv)
 	if err != nil {
-		cmd := exec.Command("rrdtool", "create", Bv, "--step 60",
+		cmd := exec.Command("/usr/bin/rrdtool", "create", Bv, "--step", "60",
 			"DS:Bv:GAUGE:120:0:36",
-			"RRA:AVERAGE:0.5:1:15",
+			"RRA:AVERAGE:0.5:1:1440",
 			"RRA:AVERAGE:0.5:10:144",
 			"RRA:AVERAGE:0.5:60:168",
 			"RRA:AVERAGE:0.5:360:87600",
@@ -165,11 +174,12 @@ func init() {
 		}
 	}
 
+	fmt.Println("Check Bc file.")
 	_, err = os.Stat(Bc)
 	if err != nil {
-		cmd := exec.Command("rrdtool", "create", Bc, "--step 60",
+		cmd := exec.Command("/usr/bin/rrdtool", "create", Bc, "--step", "60",
 			"DS:Bc:GAUGE:120:0:100",
-			"RRA:AVERAGE:0.5:1:15",
+			"RRA:AVERAGE:0.5:1:1440",
 			"RRA:AVERAGE:0.5:10:144",
 			"RRA:AVERAGE:0.5:60:168",
 			"RRA:AVERAGE:0.5:360:87600",
@@ -186,6 +196,11 @@ func main() {
 	tt := time.NewTicker(time.Second * 60)
 	for range tt.C {
 		getStatus()
+		go graphACv()
+		go graphACf()
+		go graphOPa()
+		go graphOPp()
+		go graphPV()
 	}
 }
 
@@ -273,7 +288,7 @@ func getStatus() {
 	Outputvoltage := ss[2]
 	acvo, _ := strconv.ParseFloat(Outputvoltage, 32)
 	acvupd := fmt.Sprintf("N:%.2f:%.2f", acvi, acvo)
-	acv := exec.Command("rrdtool", "update", ACv, acvupd)
+	acv := exec.Command("/usr/bin/rrdtool", "update", ACv, acvupd)
 	err = acv.Run()
 	if err != nil {
 		log.Println(err)
@@ -284,7 +299,7 @@ func getStatus() {
 	Outputfrequency := ss[3]
 	acfo, _ := strconv.ParseFloat(Outputfrequency, 32)
 	acfupd := fmt.Sprintf("N:%.2f:%.2f", acfi, acfo)
-	acf := exec.Command("rrdtool", "update", ACf, acfupd)
+	acf := exec.Command("/usr/bin/rrdtool", "update", ACf, acfupd)
 	err = acf.Run()
 	if err != nil {
 		log.Println(err)
@@ -295,7 +310,7 @@ func getStatus() {
 	OutputApparntPower := ss[5]
 	oap, _ := strconv.Atoi(OutputApparntPower)
 	oapupd := fmt.Sprintf("N:%d:%d", oac, oap)
-	oapu := exec.Command("rrdtool", "update", OPa, oapupd)
+	oapu := exec.Command("/usr/bin/rrdtool", "update", OPa, oapupd)
 	err = oapu.Run()
 	if err != nil {
 		log.Println(err)
@@ -304,7 +319,7 @@ func getStatus() {
 	OutputPower := ss[6]
 	oapp, _ := strconv.Atoi(OutputPower)
 	oappupd := fmt.Sprintf("N:%d", oapp)
-	oappu := exec.Command("rrdtool", "update", OPp, oappupd)
+	oappu := exec.Command("/usr/bin/rrdtool", "update", OPp, oappupd)
 	err = oappu.Run()
 	if err != nil {
 		log.Println(err)
@@ -315,7 +330,7 @@ func getStatus() {
 	PVInputVoltage := ss[13]
 	pvv, _ := strconv.ParseFloat(PVInputVoltage, 32)
 	pvu := fmt.Sprintf("N:%.2f:%d", pvv, pva)
-	pvupd := exec.Command("rrdtool", "update", PV, pvu)
+	pvupd := exec.Command("/usr/bin/rrdtool", "update", PV, pvu)
 	err = pvupd.Run()
 	if err != nil {
 		log.Println(err)
@@ -326,7 +341,7 @@ func getStatus() {
 	BatteryDischargeCurrent := ss[15]
 	bdc, _ := strconv.Atoi(BatteryDischargeCurrent)
 	bcdu := fmt.Sprintf("N:%d:%d", bcc, bdc)
-	bcdup := exec.Command("rrdtool", "update", BC, bcdu)
+	bcdup := exec.Command("/usr/bin/rrdtool", "update", BC, bcdu)
 	err = bcdup.Run()
 	if err != nil {
 		log.Println(err)
@@ -335,7 +350,7 @@ func getStatus() {
 	BatteryVoltage := ss[8]
 	bv, _ := strconv.ParseFloat(BatteryVoltage, 32)
 	bvu := fmt.Sprintf("N:%.2f", bv)
-	bvup := exec.Command("rrdtool", "update", Bv, bvu)
+	bvup := exec.Command("/usr/bin/rrdtool", "update", Bv, bvu)
 	err = bvup.Run()
 	if err != nil {
 		log.Println(err)
@@ -344,7 +359,7 @@ func getStatus() {
 	BatteryCapacity := ss[17]
 	bc, _ := strconv.Atoi(BatteryCapacity)
 	bcu := fmt.Sprintf("N:%d", bc)
-	bcup := exec.Command("rrdtool", "update", Bc, bcu)
+	bcup := exec.Command("/usr/bin/rrdtool", "update", Bc, bcu)
 	err = bcup.Run()
 	if err != nil {
 		log.Println(err)
