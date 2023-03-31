@@ -309,7 +309,6 @@ func getStatus() {
 	}
 
 	ss := strings.Split(rcv, " ")
-
 	ACvoltage := ss[0]
 	acvi, _ := strconv.ParseFloat(ACvoltage, 32)
 	Outputvoltage := ss[2]
