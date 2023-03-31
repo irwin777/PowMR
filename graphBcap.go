@@ -12,7 +12,7 @@ func graphBc() {
 		"-snow-30m",
 		"-w600",
 		"-h300",
-		"-tBc_30_m",
+		"-tBatteryCapacity",
 		"DEF:Bc=db/Bc.rrd:Bc:AVERAGE",
 		"LINE1:Bc#00FF00:%",
 	)
@@ -26,7 +26,7 @@ func graphBc() {
 		"-snow-1h",
 		"-w600",
 		"-h300",
-		"-tBc_1_h",
+		"-tBatteryCapacity",
 		"DEF:Bc=db/Bc.rrd:Bc:AVERAGE",
 		"LINE1:Bc#00FF00:%",
 	)
@@ -40,7 +40,7 @@ func graphBc() {
 		"-snow-3h",
 		"-w600",
 		"-h300",
-		"-tBc_3_h",
+		"-tBatteryCapacity",
 		"DEF:Bc=db/Bc.rrd:Bc:AVERAGE",
 		"LINE1:Bc#00FF00:%",
 	)
@@ -54,7 +54,7 @@ func graphBc() {
 		"-snow-1w",
 		"-w600",
 		"-h300",
-		"-tBc_1_w",
+		"-tBatteryCapacity",
 		"DEF:Bc=db/Bc.rrd:Bc:AVERAGE",
 		"LINE1:Bc#00FF00:%",
 	)
@@ -68,7 +68,7 @@ func graphBc() {
 		"-snow-1m",
 		"-w600",
 		"-h300",
-		"-tBc_1_m",
+		"-tBatteryCapacity",
 		"DEF:Bc=db/Bc.rrd:Bc:AVERAGE",
 		"LINE1:Bc#00FF00:%",
 	)
@@ -82,7 +82,7 @@ func graphBc() {
 		"-snow-1y",
 		"-w600",
 		"-h300",
-		"-tBc_1_y",
+		"-tBatteryCapacity",
 		"DEF:Bc=db/Bc.rrd:Bc:AVERAGE",
 		"LINE1:Bc#00FF00:%",
 	)
@@ -96,7 +96,7 @@ func graphBc() {
 		"-snow-2y",
 		"-w600",
 		"-h300",
-		"-tBc_2_y",
+		"-tBatteryCapacity",
 		"DEF:Bc=db/Bc.rrd:Bc:AVERAGE",
 		"LINE1:Bc#00FF00:%",
 	)

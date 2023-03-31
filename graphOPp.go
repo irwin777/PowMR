@@ -12,7 +12,7 @@ func graphOPp() {
 		"-snow-30m",
 		"-w600",
 		"-h300",
-		"-tOPp_30_m",
+		"-tOutPowerProcent",
 		"DEF:OPp=db/OPp.rrd:Op:AVERAGE",
 		"LINE1:OPp#00FF00:%",
 	)
@@ -26,7 +26,7 @@ func graphOPp() {
 		"-snow-1h",
 		"-w600",
 		"-h300",
-		"-tOPp_1_h",
+		"-tOutPowerProcent",
 		"DEF:OPp=db/OPp.rrd:Op:AVERAGE",
 		"LINE1:OPp#00FF00:%",
 	)
@@ -40,7 +40,7 @@ func graphOPp() {
 		"-snow-3h",
 		"-w600",
 		"-h300",
-		"-tOPp_3_h",
+		"-tOutPowerProcent",
 		"DEF:OPp=db/OPp.rrd:Op:AVERAGE",
 		"LINE1:OPp#00FF00:%",
 	)
@@ -54,7 +54,7 @@ func graphOPp() {
 		"-snow-1w",
 		"-w600",
 		"-h300",
-		"-tOPp_1_w",
+		"-tOutPowerProcent",
 		"DEF:OPp=db/OPp.rrd:Op:AVERAGE",
 		"LINE1:OPp#00FF00:%",
 	)
@@ -68,7 +68,7 @@ func graphOPp() {
 		"-snow-1m",
 		"-w600",
 		"-h300",
-		"-tOPp_1_m",
+		"-tOutPowerProcent",
 		"DEF:OPp=db/OPp.rrd:Op:AVERAGE",
 		"LINE1:OPp#00FF00:%",
 	)
@@ -82,7 +82,7 @@ func graphOPp() {
 		"-snow-1y",
 		"-w600",
 		"-h300",
-		"-tOPp_1_y",
+		"-tOutPowerProcent",
 		"DEF:OPp=db/OPp.rrd:Op:AVERAGE",
 		"LINE1:OPp#00FF00:%",
 	)
@@ -96,7 +96,7 @@ func graphOPp() {
 		"-snow-2y",
 		"-w600",
 		"-h300",
-		"-tOPp_2_y",
+		"-tOutPowerProcent",
 		"DEF:OPp=db/OPp.rrd:Op:AVERAGE",
 		"LINE1:OPp#00FF00:%",
 	)

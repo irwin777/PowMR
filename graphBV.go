@@ -12,7 +12,7 @@ func graphBv() {
 		"-snow-30m",
 		"-w600",
 		"-h300",
-		"-tBv_30_m",
+		"-tBatteryVoltage",
 		"DEF:Bv=db/Bv.rrd:Bv:AVERAGE",
 		"LINE1:Bv#00FF00:V",
 	)
@@ -26,7 +26,7 @@ func graphBv() {
 		"-snow-1h",
 		"-w600",
 		"-h300",
-		"-tBv_1_h",
+		"-tBatteryVoltage",
 		"DEF:Bv=db/Bv.rrd:Bv:AVERAGE",
 		"LINE1:Bv#00FF00:V",
 	)
@@ -40,7 +40,7 @@ func graphBv() {
 		"-snow-3h",
 		"-w600",
 		"-h300",
-		"-tBv_3_h",
+		"-tBatteryVoltage",
 		"DEF:Bv=db/Bv.rrd:Bv:AVERAGE",
 		"LINE1:Bv#00FF00:V",
 	)
@@ -54,7 +54,7 @@ func graphBv() {
 		"-snow-1w",
 		"-w600",
 		"-h300",
-		"-tBv_1_w",
+		"-tBatteryVoltage",
 		"DEF:Bv=db/Bv.rrd:Bv:AVERAGE",
 		"LINE1:Bv#00FF00:V",
 	)
@@ -68,7 +68,7 @@ func graphBv() {
 		"-snow-1m",
 		"-w600",
 		"-h300",
-		"-tBv_1_m",
+		"-tBatteryVoltage",
 		"DEF:Bv=db/Bv.rrd:Bv:AVERAGE",
 		"LINE1:Bv#00FF00:V",
 	)
@@ -82,7 +82,7 @@ func graphBv() {
 		"-snow-1y",
 		"-w600",
 		"-h300",
-		"-tBv_1_y",
+		"-tBatteryVoltage",
 		"DEF:Bv=db/Bv.rrd:Bv:AVERAGE",
 		"LINE1:Bv#00FF00:V",
 	)
@@ -96,7 +96,7 @@ func graphBv() {
 		"-snow-2y",
 		"-w600",
 		"-h300",
-		"-tBv_2_y",
+		"-tBatteryVoltage",
 		"DEF:Bv=db/Bv.rrd:Bv:AVERAGE",
 		"LINE1:Bv#00FF00:V",
 	)
