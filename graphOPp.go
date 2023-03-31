@@ -13,6 +13,7 @@ func graphOPp() {
 		"-w600",
 		"-h300",
 		"-tOutPowerProcent",
+		"-vPercent",
 		"DEF:OPp=db/OPp.rrd:Op:AVERAGE",
 		"LINE1:OPp#00FF00:%",
 	)
@@ -27,6 +28,7 @@ func graphOPp() {
 		"-w600",
 		"-h300",
 		"-tOutPowerProcent",
+		"-vPercent",
 		"DEF:OPp=db/OPp.rrd:Op:AVERAGE",
 		"LINE1:OPp#00FF00:%",
 	)
@@ -41,6 +43,7 @@ func graphOPp() {
 		"-w600",
 		"-h300",
 		"-tOutPowerProcent",
+		"-vPercent",
 		"DEF:OPp=db/OPp.rrd:Op:AVERAGE",
 		"LINE1:OPp#00FF00:%",
 	)
@@ -55,6 +58,7 @@ func graphOPp() {
 		"-w600",
 		"-h300",
 		"-tOutPowerProcent",
+		"-vPercent",
 		"DEF:OPp=db/OPp.rrd:Op:AVERAGE",
 		"LINE1:OPp#00FF00:%",
 	)
@@ -69,6 +73,7 @@ func graphOPp() {
 		"-w600",
 		"-h300",
 		"-tOutPowerProcent",
+		"-vPercent",
 		"DEF:OPp=db/OPp.rrd:Op:AVERAGE",
 		"LINE1:OPp#00FF00:%",
 	)
@@ -83,6 +88,7 @@ func graphOPp() {
 		"-w600",
 		"-h300",
 		"-tOutPowerProcent",
+		"-vPercent",
 		"DEF:OPp=db/OPp.rrd:Op:AVERAGE",
 		"LINE1:OPp#00FF00:%",
 	)
@@ -97,6 +103,7 @@ func graphOPp() {
 		"-w600",
 		"-h300",
 		"-tOutPowerProcent",
+		"-vPercent",
 		"DEF:OPp=db/OPp.rrd:Op:AVERAGE",
 		"LINE1:OPp#00FF00:%",
 	)
