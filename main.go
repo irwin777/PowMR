@@ -301,8 +301,13 @@ func getStatus() {
 	rcv, err = getData("QPIGS")
 	if err != nil {
 		log.Println(err)
-		return
+		rcv, err = getData("QPIGS")
+		if err != nil {
+			log.Println(err)
+			return
+		}
 	}
+
 	ss := strings.Split(rcv, " ")
 
 	ACvoltage := ss[0]
