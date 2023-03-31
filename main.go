@@ -11,6 +11,8 @@ import (
 	"strings"
 	"time"
 
+	"github.com/gin-contrib/cors"
+	"github.com/gin-gonic/gin"
 	"github.com/snksoft/crc"
 	"github.com/tarm/serial"
 )
@@ -194,16 +196,33 @@ func init() {
 func main() {
 	fmt.Println("START")
 	tt := time.NewTicker(time.Second * 60)
-	for range tt.C {
-		getStatus()
-		go graphACv()
-		go graphACf()
-		go graphOPa()
-		go graphOPp()
-		go graphPV()
-		go graphBC()
-		go graphBv()
-		go graphBc()
+	go func() {
+		for range tt.C {
+			getStatus()
+			go graphACv()
+			go graphACf()
+			go graphOPa()
+			go graphOPp()
+			go graphPV()
+			go graphBC()
+			go graphBv()
+			go graphBc()
+		}
+	}()
+
+	r := gin.Default()
+	r.SetTrustedProxies([]string{"127.0.0.1", "localhost", "192.168.88.0/24", "10.11.12.0/24"})
+	corsConfig := cors.Config{
+		AllowAllOrigins:  true,
+		AllowCredentials: true,
+		AllowMethods:     []string{"GET", "POST", "PUT", "DELETE", "OPTIONS"},
+		AllowHeaders:     []string{"Origin", "Authorization", "Content-Type", "Accept", "X-Requested-With", "Accept-Encoding", "User-Agent", "Referrer", "Host", "Token"},
+	}
+	r.Use(cors.New(corsConfig))
+	r.Static("/", "./html")
+	err := r.Run(":80")
+	if err != nil {
+		log.Fatalln(err)
 	}
 }
 
