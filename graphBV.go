@@ -16,7 +16,7 @@ func graphBv() {
 		"-vVolt",
 		"-E",
 		"DEF:Bv=db/Bv.rrd:Bv:AVERAGE",
-		"LINE1:Bv#00FF00:V",
+		"AREA:Bv#00FF00:V",
 	)
 	err := Bv30mcom.Run()
 	if err != nil {
@@ -32,7 +32,7 @@ func graphBv() {
 		"-vVolt",
 		"-E",
 		"DEF:Bv=db/Bv.rrd:Bv:AVERAGE",
-		"LINE1:Bv#00FF00:V",
+		"AREA:Bv#00FF00:V",
 	)
 	err = Bv1hcom.Run()
 	if err != nil {
@@ -48,7 +48,7 @@ func graphBv() {
 		"-vVolt",
 		"-E",
 		"DEF:Bv=db/Bv.rrd:Bv:AVERAGE",
-		"LINE1:Bv#00FF00:V",
+		"AREA:Bv#00FF00:V",
 	)
 	err = Bv3hcom.Run()
 	if err != nil {
@@ -64,7 +64,7 @@ func graphBv() {
 		"-vVolt",
 		"-E",
 		"DEF:Bv=db/Bv.rrd:Bv:AVERAGE",
-		"LINE1:Bv#00FF00:V",
+		"AREA:Bv#00FF00:V",
 	)
 	err = Bv1dcom.Run()
 	if err != nil {
@@ -80,7 +80,7 @@ func graphBv() {
 		"-vVolt",
 		"-E",
 		"DEF:Bv=db/Bv.rrd:Bv:AVERAGE",
-		"LINE1:Bv#00FF00:V",
+		"AREA:Bv#00FF00:V",
 	)
 	err = Bv1wcom.Run()
 	if err != nil {
@@ -96,7 +96,7 @@ func graphBv() {
 		"-vVolt",
 		"-E",
 		"DEF:Bv=db/Bv.rrd:Bv:AVERAGE",
-		"LINE1:Bv#00FF00:V",
+		"AREA:Bv#00FF00:V",
 	)
 	err = Bv1mcom.Run()
 	if err != nil {
@@ -112,7 +112,7 @@ func graphBv() {
 		"-vVolt",
 		"-E",
 		"DEF:Bv=db/Bv.rrd:Bv:AVERAGE",
-		"LINE1:Bv#00FF00:V",
+		"AREA:Bv#00FF00:V",
 	)
 	err = Bv1ycom.Run()
 	if err != nil {
@@ -128,7 +128,7 @@ func graphBv() {
 		"-vVolt",
 		"-E",
 		"DEF:Bv=db/Bv.rrd:Bv:AVERAGE",
-		"LINE1:Bv#00FF00:V",
+		"AREA:Bv#00FF00:V",
 	)
 	err = Bv2ycom.Run()
 	if err != nil {

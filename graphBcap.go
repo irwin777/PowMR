@@ -16,7 +16,7 @@ func graphBc() {
 		"-vPercent",
 		"-E",
 		"DEF:Bc=db/Bc.rrd:Bc:AVERAGE",
-		"LINE1:Bc#00FF00:%",
+		"AREA:Bc#00FF00:%",
 	)
 	err := Bc30mcom.Run()
 	if err != nil {
@@ -32,7 +32,7 @@ func graphBc() {
 		"-vPercent",
 		"-E",
 		"DEF:Bc=db/Bc.rrd:Bc:AVERAGE",
-		"LINE1:Bc#00FF00:%",
+		"AREA:Bc#00FF00:%",
 	)
 	err = Bc1hcom.Run()
 	if err != nil {
@@ -48,7 +48,7 @@ func graphBc() {
 		"-vPercent",
 		"-E",
 		"DEF:Bc=db/Bc.rrd:Bc:AVERAGE",
-		"LINE1:Bc#00FF00:%",
+		"AREA:Bc#00FF00:%",
 	)
 	err = Bc3hcom.Run()
 	if err != nil {
@@ -64,7 +64,7 @@ func graphBc() {
 		"-vPercent",
 		"-E",
 		"DEF:Bc=db/Bc.rrd:Bc:AVERAGE",
-		"LINE1:Bc#00FF00:%",
+		"AREA:Bc#00FF00:%",
 	)
 	err = Bc1dcom.Run()
 	if err != nil {
@@ -80,7 +80,7 @@ func graphBc() {
 		"-vPercent",
 		"-E",
 		"DEF:Bc=db/Bc.rrd:Bc:AVERAGE",
-		"LINE1:Bc#00FF00:%",
+		"AREA:Bc#00FF00:%",
 	)
 	err = Bc1wcom.Run()
 	if err != nil {
@@ -96,7 +96,7 @@ func graphBc() {
 		"-vPercent",
 		"-E",
 		"DEF:Bc=db/Bc.rrd:Bc:AVERAGE",
-		"LINE1:Bc#00FF00:%",
+		"AREA:Bc#00FF00:%",
 	)
 	err = Bc1mcom.Run()
 	if err != nil {
@@ -112,7 +112,7 @@ func graphBc() {
 		"-vPercent",
 		"-E",
 		"DEF:Bc=db/Bc.rrd:Bc:AVERAGE",
-		"LINE1:Bc#00FF00:%",
+		"AREA:Bc#00FF00:%",
 	)
 	err = Bc1ycom.Run()
 	if err != nil {
@@ -128,7 +128,7 @@ func graphBc() {
 		"-vPercent",
 		"-E",
 		"DEF:Bc=db/Bc.rrd:Bc:AVERAGE",
-		"LINE1:Bc#00FF00:%",
+		"AREA:Bc#00FF00:%",
 	)
 	err = Bc2ycom.Run()
 	if err != nil {

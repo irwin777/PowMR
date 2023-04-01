@@ -16,7 +16,7 @@ func graphOPp() {
 		"-vPercent",
 		"-E",
 		"DEF:OPp=db/OPp.rrd:Op:AVERAGE",
-		"LINE1:OPp#00FF00:%",
+		"AREA:OPp#00FF00:%",
 	)
 	err := OPp30mcom.Run()
 	if err != nil {
@@ -32,7 +32,7 @@ func graphOPp() {
 		"-vPercent",
 		"-E",
 		"DEF:OPp=db/OPp.rrd:Op:AVERAGE",
-		"LINE1:OPp#00FF00:%",
+		"AREA:OPp#00FF00:%",
 	)
 	err = OPp1hcom.Run()
 	if err != nil {
@@ -48,7 +48,7 @@ func graphOPp() {
 		"-vPercent",
 		"-E",
 		"DEF:OPp=db/OPp.rrd:Op:AVERAGE",
-		"LINE1:OPp#00FF00:%",
+		"AREA:OPp#00FF00:%",
 	)
 	err = OPp3hcom.Run()
 	if err != nil {
@@ -64,7 +64,7 @@ func graphOPp() {
 		"-vPercent",
 		"-E",
 		"DEF:OPp=db/OPp.rrd:Op:AVERAGE",
-		"LINE1:OPp#00FF00:%",
+		"AREA:OPp#00FF00:%",
 	)
 	err = OPp1dcom.Run()
 	if err != nil {
@@ -80,7 +80,7 @@ func graphOPp() {
 		"-vPercent",
 		"-E",
 		"DEF:OPp=db/OPp.rrd:Op:AVERAGE",
-		"LINE1:OPp#00FF00:%",
+		"AREA:OPp#00FF00:%",
 	)
 	err = OPp1wcom.Run()
 	if err != nil {
@@ -96,7 +96,7 @@ func graphOPp() {
 		"-vPercent",
 		"-E",
 		"DEF:OPp=db/OPp.rrd:Op:AVERAGE",
-		"LINE1:OPp#00FF00:%",
+		"AREA:OPp#00FF00:%",
 	)
 	err = OPp1mcom.Run()
 	if err != nil {
@@ -112,7 +112,7 @@ func graphOPp() {
 		"-vPercent",
 		"-E",
 		"DEF:OPp=db/OPp.rrd:Op:AVERAGE",
-		"LINE1:OPp#00FF00:%",
+		"AREA:OPp#00FF00:%",
 	)
 	err = OPp1ycom.Run()
 	if err != nil {
@@ -128,7 +128,7 @@ func graphOPp() {
 		"-vPercent",
 		"-E",
 		"DEF:OPp=db/OPp.rrd:Op:AVERAGE",
-		"LINE1:OPp#00FF00:%",
+		"AREA:OPp#00FF00:%",
 	)
 	err = OPp2ycom.Run()
 	if err != nil {
