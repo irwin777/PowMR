@@ -14,6 +14,7 @@ func graphBv() {
 		"-h300",
 		"-tBatteryVoltage",
 		"-vVolt",
+		"-E",
 		"DEF:Bv=db/Bv.rrd:Bv:AVERAGE",
 		"LINE1:Bv#00FF00:V",
 	)
@@ -29,6 +30,7 @@ func graphBv() {
 		"-h300",
 		"-tBatteryVoltage",
 		"-vVolt",
+		"-E",
 		"DEF:Bv=db/Bv.rrd:Bv:AVERAGE",
 		"LINE1:Bv#00FF00:V",
 	)
@@ -44,6 +46,7 @@ func graphBv() {
 		"-h300",
 		"-tBatteryVoltage",
 		"-vVolt",
+		"-E",
 		"DEF:Bv=db/Bv.rrd:Bv:AVERAGE",
 		"LINE1:Bv#00FF00:V",
 	)
@@ -59,6 +62,7 @@ func graphBv() {
 		"-h300",
 		"-tBatteryVoltage",
 		"-vVolt",
+		"-E",
 		"DEF:Bv=db/Bv.rrd:Bv:AVERAGE",
 		"LINE1:Bv#00FF00:V",
 	)
@@ -74,6 +78,7 @@ func graphBv() {
 		"-h300",
 		"-tBatteryVoltage",
 		"-vVolt",
+		"-E",
 		"DEF:Bv=db/Bv.rrd:Bv:AVERAGE",
 		"LINE1:Bv#00FF00:V",
 	)
@@ -89,6 +94,7 @@ func graphBv() {
 		"-h300",
 		"-tBatteryVoltage",
 		"-vVolt",
+		"-E",
 		"DEF:Bv=db/Bv.rrd:Bv:AVERAGE",
 		"LINE1:Bv#00FF00:V",
 	)
@@ -104,6 +110,7 @@ func graphBv() {
 		"-h300",
 		"-tBatteryVoltage",
 		"-vVolt",
+		"-E",
 		"DEF:Bv=db/Bv.rrd:Bv:AVERAGE",
 		"LINE1:Bv#00FF00:V",
 	)
@@ -119,6 +126,7 @@ func graphBv() {
 		"-h300",
 		"-tBatteryVoltage",
 		"-vVolt",
+		"-E",
 		"DEF:Bv=db/Bv.rrd:Bv:AVERAGE",
 		"LINE1:Bv#00FF00:V",
 	)

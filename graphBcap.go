@@ -14,6 +14,7 @@ func graphBc() {
 		"-h300",
 		"-tBatteryCapacity",
 		"-vPercent",
+		"-E",
 		"DEF:Bc=db/Bc.rrd:Bc:AVERAGE",
 		"LINE1:Bc#00FF00:%",
 	)
@@ -29,6 +30,7 @@ func graphBc() {
 		"-h300",
 		"-tBatteryCapacity",
 		"-vPercent",
+		"-E",
 		"DEF:Bc=db/Bc.rrd:Bc:AVERAGE",
 		"LINE1:Bc#00FF00:%",
 	)
@@ -44,6 +46,7 @@ func graphBc() {
 		"-h300",
 		"-tBatteryCapacity",
 		"-vPercent",
+		"-E",
 		"DEF:Bc=db/Bc.rrd:Bc:AVERAGE",
 		"LINE1:Bc#00FF00:%",
 	)
@@ -59,6 +62,7 @@ func graphBc() {
 		"-h300",
 		"-tBatteryCapacity",
 		"-vPercent",
+		"-E",
 		"DEF:Bc=db/Bc.rrd:Bc:AVERAGE",
 		"LINE1:Bc#00FF00:%",
 	)
@@ -74,6 +78,7 @@ func graphBc() {
 		"-h300",
 		"-tBatteryCapacity",
 		"-vPercent",
+		"-E",
 		"DEF:Bc=db/Bc.rrd:Bc:AVERAGE",
 		"LINE1:Bc#00FF00:%",
 	)
@@ -89,6 +94,7 @@ func graphBc() {
 		"-h300",
 		"-tBatteryCapacity",
 		"-vPercent",
+		"-E",
 		"DEF:Bc=db/Bc.rrd:Bc:AVERAGE",
 		"LINE1:Bc#00FF00:%",
 	)
@@ -104,6 +110,7 @@ func graphBc() {
 		"-h300",
 		"-tBatteryCapacity",
 		"-vPercent",
+		"-E",
 		"DEF:Bc=db/Bc.rrd:Bc:AVERAGE",
 		"LINE1:Bc#00FF00:%",
 	)
@@ -119,6 +126,7 @@ func graphBc() {
 		"-h300",
 		"-tBatteryCapacity",
 		"-vPercent",
+		"-E",
 		"DEF:Bc=db/Bc.rrd:Bc:AVERAGE",
 		"LINE1:Bc#00FF00:%",
 	)
