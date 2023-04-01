@@ -7,3 +7,4 @@ install:build
 	ssh root@172.20.20.15 "systemctl status ipwm3000"
 www:
 	scp html/*.html root@172.20.20.15:/root/PowMR/html/
+	scp html/*.css root@172.20.20.15:/root/PowMR/html/

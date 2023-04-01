@@ -18,7 +18,7 @@ func graphPV() {
 		"DEF:PVV=db/PV.rrd:V:AVERAGE",
 		"DEF:PVA=db/PV.rrd:A:AVERAGE",
 		"LINE1:PVV#0000FF:V",
-		"LINE1:PVA#00FF00:A",
+		"AREA:PVA#00FF00:A",
 	)
 	err := pv30mcom.Run()
 	if err != nil {
@@ -36,7 +36,7 @@ func graphPV() {
 		"DEF:PVV=db/PV.rrd:V:AVERAGE",
 		"DEF:PVA=db/PV.rrd:A:AVERAGE",
 		"LINE1:PVV#0000FF:V",
-		"LINE1:PVA#00FF00:A",
+		"AREA:PVA#00FF00:A",
 	)
 	err = pv1hcom.Run()
 	if err != nil {
@@ -54,7 +54,7 @@ func graphPV() {
 		"DEF:PVV=db/PV.rrd:V:AVERAGE",
 		"DEF:PVA=db/PV.rrd:A:AVERAGE",
 		"LINE1:PVV#0000FF:V",
-		"LINE1:PVA#00FF00:A",
+		"AREA:PVA#00FF00:A",
 	)
 	err = pv3hcom.Run()
 	if err != nil {
@@ -72,7 +72,7 @@ func graphPV() {
 		"DEF:PVV=db/PV.rrd:V:AVERAGE",
 		"DEF:PVA=db/PV.rrd:A:AVERAGE",
 		"LINE1:PVV#0000FF:V",
-		"LINE1:PVA#00FF00:A",
+		"AREA:PVA#00FF00:A",
 	)
 	err = pv1dcom.Run()
 	if err != nil {
@@ -90,7 +90,7 @@ func graphPV() {
 		"DEF:PVV=db/PV.rrd:V:AVERAGE",
 		"DEF:PVA=db/PV.rrd:A:AVERAGE",
 		"LINE1:PVV#0000FF:V",
-		"LINE1:PVA#00FF00:A",
+		"AREA:PVA#00FF00:A",
 	)
 	err = pv1wcom.Run()
 	if err != nil {
@@ -108,7 +108,7 @@ func graphPV() {
 		"DEF:PVV=db/PV.rrd:V:AVERAGE",
 		"DEF:PVA=db/PV.rrd:A:AVERAGE",
 		"LINE1:PVV#0000FF:V",
-		"LINE1:PVA#00FF00:A",
+		"AREA:PVA#00FF00:A",
 	)
 	err = pv1mcom.Run()
 	if err != nil {
@@ -126,7 +126,7 @@ func graphPV() {
 		"DEF:PVV=db/PV.rrd:V:AVERAGE",
 		"DEF:PVA=db/PV.rrd:A:AVERAGE",
 		"LINE1:PVV#0000FF:V",
-		"LINE1:PVA#00FF00:A",
+		"AREA:PVA#00FF00:A",
 	)
 	err = pv1ycom.Run()
 	if err != nil {
@@ -144,7 +144,7 @@ func graphPV() {
 		"DEF:PVV=db/PV.rrd:V:AVERAGE",
 		"DEF:PVA=db/PV.rrd:A:AVERAGE",
 		"LINE1:PVV#0000FF:V",
-		"LINE1:PVA#00FF00:A",
+		"AREA:PVA#00FF00:A",
 	)
 	err = pv2ycom.Run()
 	if err != nil {
