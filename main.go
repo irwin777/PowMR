@@ -297,6 +297,7 @@ func getStatus() {
 		return
 	}
 	Mode = rcv
+	log.Println("Mode -", Mode)
 
 	rcv, err = getData("QPIGS")
 	if err != nil {
