@@ -9,6 +9,7 @@ import (
 	"os/exec"
 	"strconv"
 	"strings"
+	"sync"
 	"time"
 
 	"github.com/gin-contrib/cors"
@@ -199,14 +200,46 @@ func main() {
 	go func() {
 		for range tt.C {
 			getStatus()
-			go graphACv()
-			go graphACf()
-			go graphOPa()
-			go graphOPp()
-			go graphPV()
-			go graphBC()
-			go graphBv()
-			go graphBc()
+			var wg sync.WaitGroup
+			wg.Add(1)
+			go func() {
+				defer wg.Done()
+				graphACv()
+			}()
+			wg.Add(1)
+			go func() {
+				defer wg.Done()
+				graphACf()
+			}()
+			wg.Add(1)
+			go func() {
+				defer wg.Done()
+				graphOPa()
+			}()
+			wg.Add(1)
+			go func() {
+				graphOPp()
+			}()
+			wg.Add(1)
+			go func() {
+				defer wg.Done()
+				graphPV()
+			}()
+			wg.Add(1)
+			go func() {
+				graphBC()
+			}()
+			wg.Add(1)
+			go func() {
+				defer wg.Done()
+				graphBv()
+			}()
+			wg.Add(1)
+			go func() {
+				defer wg.Done()
+				graphBc()
+			}()
+			wg.Wait()
 		}
 	}()
 
@@ -314,7 +347,7 @@ func getStatus() {
 	}
 
 	ss := strings.Split(rcv, " ")
-	log.Printf("Status %v\n", ss)
+	log.Printf("Status %s\n", ss)
 	ACvoltage := ss[0]
 	acvi, _ := strconv.ParseFloat(ACvoltage, 32)
 	Outputvoltage := ss[2]
