@@ -218,6 +218,7 @@ func main() {
 			}()
 			wg.Add(1)
 			go func() {
+				defer wg.Done()
 				graphOPp()
 			}()
 			wg.Add(1)
@@ -227,6 +228,7 @@ func main() {
 			}()
 			wg.Add(1)
 			go func() {
+				defer wg.Done()
 				graphBC()
 			}()
 			wg.Add(1)
