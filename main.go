@@ -210,7 +210,8 @@ func main() {
 		}
 	}()
 
-	r := gin.Default()
+	gin.SetMode(gin.ReleaseMode)
+	r := gin.New()
 	r.SetTrustedProxies([]string{"127.0.0.1", "localhost", "192.168.88.0/24", "10.11.12.0/24"})
 	corsConfig := cors.Config{
 		AllowAllOrigins:  true,
@@ -227,6 +228,7 @@ func main() {
 }
 
 func getData(rq string) (string, error) {
+	log.Println("getData")
 	config := serial.Config{
 		Name:     "/dev/ttyUSB0",
 		Baud:     2400,
@@ -263,10 +265,12 @@ func getData(rq string) (string, error) {
 		return "", fmt.Errorf("CRC Error")
 	}
 	dd := d[1:]
+	log.Printf("Data % X\n", dd)
 	return string(dd), nil
 }
 
 func getStatus() {
+	log.Println("getStatus")
 	/*
 	   'QPI'		=> "515049beac0d", ##  Device Protocol ID Inquiry
 	   	'QID'		=> "514944d6ea0d", ## Device Serial Number Inquiry
@@ -310,11 +314,13 @@ func getStatus() {
 	}
 
 	ss := strings.Split(rcv, " ")
+	log.Printf("Status %v\n", ss)
 	ACvoltage := ss[0]
 	acvi, _ := strconv.ParseFloat(ACvoltage, 32)
 	Outputvoltage := ss[2]
 	acvo, _ := strconv.ParseFloat(Outputvoltage, 32)
 	acvupd := fmt.Sprintf("N:%.2f:%.2f", acvi, acvo)
+	log.Println("acvupd", acvupd)
 	acv := exec.Command("/usr/bin/rrdtool", "update", ACv, acvupd)
 	err = acv.Run()
 	if err != nil {
@@ -326,6 +332,7 @@ func getStatus() {
 	Outputfrequency := ss[3]
 	acfo, _ := strconv.ParseFloat(Outputfrequency, 32)
 	acfupd := fmt.Sprintf("N:%.2f:%.2f", acfi, acfo)
+	log.Println("acfupd", acfupd)
 	acf := exec.Command("/usr/bin/rrdtool", "update", ACf, acfupd)
 	err = acf.Run()
 	if err != nil {
@@ -337,6 +344,7 @@ func getStatus() {
 	OutputApparntPower := ss[5]
 	oap, _ := strconv.Atoi(OutputApparntPower)
 	oapupd := fmt.Sprintf("N:%d:%d", oac, oap)
+	log.Println("oapupd", oapupd)
 	oapu := exec.Command("/usr/bin/rrdtool", "update", OPa, oapupd)
 	err = oapu.Run()
 	if err != nil {
@@ -346,6 +354,7 @@ func getStatus() {
 	OutputPower := ss[6]
 	oapp, _ := strconv.Atoi(OutputPower)
 	oappupd := fmt.Sprintf("N:%d", oapp)
+	log.Println("oappupd", oappupd)
 	oappu := exec.Command("/usr/bin/rrdtool", "update", OPp, oappupd)
 	err = oappu.Run()
 	if err != nil {
@@ -357,6 +366,7 @@ func getStatus() {
 	PVInputVoltage := ss[13]
 	pvv, _ := strconv.ParseFloat(PVInputVoltage, 32)
 	pvu := fmt.Sprintf("N:%.2f:%d", pvv, pva)
+	log.Println("pvu", pvu)
 	pvupd := exec.Command("/usr/bin/rrdtool", "update", PV, pvu)
 	err = pvupd.Run()
 	if err != nil {
@@ -368,6 +378,7 @@ func getStatus() {
 	BatteryDischargeCurrent := ss[15]
 	bdc, _ := strconv.Atoi(BatteryDischargeCurrent)
 	bcdu := fmt.Sprintf("N:%d:%d", bcc, bdc)
+	log.Println("bcdu", bcdu)
 	bcdup := exec.Command("/usr/bin/rrdtool", "update", BC, bcdu)
 	err = bcdup.Run()
 	if err != nil {
@@ -377,6 +388,7 @@ func getStatus() {
 	BatteryVoltage := ss[8]
 	bv, _ := strconv.ParseFloat(BatteryVoltage, 32)
 	bvu := fmt.Sprintf("N:%.2f", bv)
+	log.Println("bvu", bvu)
 	bvup := exec.Command("/usr/bin/rrdtool", "update", Bv, bvu)
 	err = bvup.Run()
 	if err != nil {
@@ -386,6 +398,7 @@ func getStatus() {
 	BatteryCapacity := ss[17]
 	bc, _ := strconv.Atoi(BatteryCapacity)
 	bcu := fmt.Sprintf("N:%d", bc)
+	log.Println("bcu", bcu)
 	bcup := exec.Command("/usr/bin/rrdtool", "update", Bc, bcu)
 	err = bcup.Run()
 	if err != nil {
