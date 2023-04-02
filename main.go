@@ -352,7 +352,7 @@ func getStatus() {
 	acvi, _ := strconv.ParseFloat(ACvoltage, 32)
 	Outputvoltage := ss[2]
 	acvo, _ := strconv.ParseFloat(Outputvoltage, 32)
-	acvupd := fmt.Sprintf("N:%.2f:%.2f", acvi, acvo)
+	acvupd := fmt.Sprintf("N:%.1f:%.1f", acvi, acvo)
 	log.Println("acvupd", acvupd)
 	acv := exec.Command("/usr/bin/rrdtool", "update", ACv, acvupd)
 	err = acv.Run()
@@ -364,7 +364,7 @@ func getStatus() {
 	acfi, _ := strconv.ParseFloat(ACfrequency, 32)
 	Outputfrequency := ss[3]
 	acfo, _ := strconv.ParseFloat(Outputfrequency, 32)
-	acfupd := fmt.Sprintf("N:%.2f:%.2f", acfi, acfo)
+	acfupd := fmt.Sprintf("N:%.1f:%.1f", acfi, acfo)
 	log.Println("acfupd", acfupd)
 	acf := exec.Command("/usr/bin/rrdtool", "update", ACf, acfupd)
 	err = acf.Run()
@@ -398,7 +398,7 @@ func getStatus() {
 	pva, _ := strconv.Atoi(PVInputCurrent)
 	PVInputVoltage := ss[13]
 	pvv, _ := strconv.ParseFloat(PVInputVoltage, 32)
-	pvu := fmt.Sprintf("N:%.2f:%d", pvv, pva)
+	pvu := fmt.Sprintf("N:%.1f:%d", pvv, pva)
 	log.Println("pvu", pvu)
 	pvupd := exec.Command("/usr/bin/rrdtool", "update", PV, pvu)
 	err = pvupd.Run()
@@ -420,7 +420,7 @@ func getStatus() {
 
 	BatteryVoltage := ss[8]
 	bv, _ := strconv.ParseFloat(BatteryVoltage, 32)
-	bvu := fmt.Sprintf("N:%.2f", bv)
+	bvu := fmt.Sprintf("N:%.1f", bv)
 	log.Println("bvu", bvu)
 	bvup := exec.Command("/usr/bin/rrdtool", "update", Bv, bvu)
 	err = bvup.Run()
