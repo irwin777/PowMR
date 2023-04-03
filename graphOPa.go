@@ -19,6 +19,8 @@ func graphOPa() {
 		"DEF:OPap=db/OPa.rrd:Ap:AVERAGE",
 		"LINE1:OPac#0000FF:ActivePower",
 		"LINE1:OPap#00FF00:ApparntPower",
+		"GPRINT:OPac:LAST:Current\\:%4.0lf",
+		"GPRINT:OPap:LAST:Current\\:%4.0lf",
 	)
 	err := OPa30mcom.Run()
 	if err != nil {
@@ -37,6 +39,8 @@ func graphOPa() {
 		"DEF:OPap=db/OPa.rrd:Ap:AVERAGE",
 		"LINE1:OPac#0000FF:ActivePower",
 		"LINE1:OPap#00FF00:ApparntPower",
+		"GPRINT:OPac:LAST:Current\\:%4.0lf",
+		"GPRINT:OPap:LAST:Current\\:%4.0lf",
 	)
 	err = OPa1hcom.Run()
 	if err != nil {
@@ -55,6 +59,8 @@ func graphOPa() {
 		"DEF:OPap=db/OPa.rrd:Ap:AVERAGE",
 		"LINE1:OPac#0000FF:ActivePower",
 		"LINE1:OPap#00FF00:ApparntPower",
+		"GPRINT:OPac:LAST:Current\\:%4.0lf",
+		"GPRINT:OPap:LAST:Current\\:%4.0lf",
 	)
 	err = OPa3hcom.Run()
 	if err != nil {
@@ -73,6 +79,8 @@ func graphOPa() {
 		"DEF:OPap=db/OPa.rrd:Ap:AVERAGE",
 		"LINE1:OPac#0000FF:ActivePower",
 		"LINE1:OPap#00FF00:ApparntPower",
+		"GPRINT:OPac:LAST:Current\\:%4.0lf",
+		"GPRINT:OPap:LAST:Current\\:%4.0lf",
 	)
 	err = OPa1dcom.Run()
 	if err != nil {
@@ -91,6 +99,8 @@ func graphOPa() {
 		"DEF:OPap=db/OPa.rrd:Ap:AVERAGE",
 		"LINE1:OPac#0000FF:ActivePower",
 		"LINE1:OPap#00FF00:ApparntPower",
+		"GPRINT:OPac:LAST:Current\\:%4.0lf",
+		"GPRINT:OPap:LAST:Current\\:%4.0lf",
 	)
 	err = OPa1wcom.Run()
 	if err != nil {
@@ -109,6 +119,8 @@ func graphOPa() {
 		"DEF:OPap=db/OPa.rrd:Ap:AVERAGE",
 		"LINE1:OPac#0000FF:ActivePower",
 		"LINE1:OPap#00FF00:ApparntPower",
+		"GPRINT:OPac:LAST:Current\\:%4.0lf",
+		"GPRINT:OPap:LAST:Current\\:%4.0lf",
 	)
 	err = OPa1mcom.Run()
 	if err != nil {
@@ -127,6 +139,8 @@ func graphOPa() {
 		"DEF:OPap=db/OPa.rrd:Ap:AVERAGE",
 		"LINE1:OPac#0000FF:ActivePower",
 		"LINE1:OPap#00FF00:ApparntPower",
+		"GPRINT:OPac:LAST:Current\\:%4.0lf",
+		"GPRINT:OPap:LAST:Current\\:%4.0lf",
 	)
 	err = OPa1ycom.Run()
 	if err != nil {
@@ -145,6 +159,8 @@ func graphOPa() {
 		"DEF:OPap=db/OPa.rrd:Ap:AVERAGE",
 		"LINE1:OPac#0000FF:ActivePower",
 		"LINE1:OPap#00FF00:ApparntPower",
+		"GPRINT:OPac:LAST:Current\\:%4.0lf",
+		"GPRINT:OPap:LAST:Current\\:%4.0lf",
 	)
 	err = OPa2ycom.Run()
 	if err != nil {

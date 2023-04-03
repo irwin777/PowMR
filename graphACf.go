@@ -12,13 +12,15 @@ func graphACf() {
 		"-snow-30m",
 		"-w600",
 		"-h300",
-		"-ACFreqmency",
+		"-tACFreqmency",
 		"-vHz",
 		"-E",
 		"DEF:ACfi=db/ACf.rrd:Fi:AVERAGE",
 		"DEF:ACfo=db/ACf.rrd:Fo:AVERAGE",
 		"LINE1:ACfi#0000FF:In",
 		"LINE1:ACfo#00FF00:Out",
+		"GPRINT:ACfi:LAST:Current\\:%4.1lf",
+		"GPRINT:ACfo:LAST:Current\\:%4.1lf",
 	)
 	err := ACf30mcom.Run()
 	if err != nil {
@@ -30,13 +32,15 @@ func graphACf() {
 		"-snow-1h",
 		"-w600",
 		"-h300",
-		"-ACFreqmency",
+		"-tACFreqmency",
 		"-vHz",
 		"-E",
 		"DEF:ACfi=db/ACf.rrd:Fi:AVERAGE",
 		"DEF:ACfo=db/ACf.rrd:Fo:AVERAGE",
 		"LINE1:ACfi#0000FF:In",
 		"LINE1:ACfo#00FF00:Out",
+		"GPRINT:ACfi:LAST:Current\\:%4.1lf",
+		"GPRINT:ACfo:LAST:Current\\:%4.1lf",
 	)
 	err = ACf1hcom.Run()
 	if err != nil {
@@ -48,13 +52,15 @@ func graphACf() {
 		"-snow-3h",
 		"-w600",
 		"-h300",
-		"-ACFreqmency",
+		"-tACFreqmency",
 		"-vHz",
 		"-E",
 		"DEF:ACfi=db/ACf.rrd:Fi:AVERAGE",
 		"DEF:ACfo=db/ACf.rrd:Fo:AVERAGE",
 		"LINE1:ACfi#0000FF:In",
 		"LINE1:ACfo#00FF00:Out",
+		"GPRINT:ACfi:LAST:Current\\:%4.1lf",
+		"GPRINT:ACfo:LAST:Current\\:%4.1lf",
 	)
 	err = ACf3hcom.Run()
 	if err != nil {
@@ -66,13 +72,15 @@ func graphACf() {
 		"-snow-1d",
 		"-w600",
 		"-h300",
-		"-ACFreqmency",
+		"-tACFreqmency",
 		"-vHz",
 		"-E",
 		"DEF:ACfi=db/ACf.rrd:Fi:AVERAGE",
 		"DEF:ACfo=db/ACf.rrd:Fo:AVERAGE",
 		"LINE1:ACfi#0000FF:In",
 		"LINE1:ACfo#00FF00:Out",
+		"GPRINT:ACfi:LAST:Current\\:%4.1lf",
+		"GPRINT:ACfo:LAST:Current\\:%4.1lf",
 	)
 	err = ACf1dcom.Run()
 	if err != nil {
@@ -84,13 +92,15 @@ func graphACf() {
 		"-snow-1w",
 		"-w600",
 		"-h300",
-		"-ACFreqmency",
+		"-tACFreqmency",
 		"-vHz",
 		"-E",
 		"DEF:ACfi=db/ACf.rrd:Fi:AVERAGE",
 		"DEF:ACfo=db/ACf.rrd:Fo:AVERAGE",
 		"LINE1:ACfi#0000FF:In",
 		"LINE1:ACfo#00FF00:Out",
+		"GPRINT:ACfi:LAST:Current\\:%4.1lf",
+		"GPRINT:ACfo:LAST:Current\\:%4.1lf",
 	)
 	err = ACf1wcom.Run()
 	if err != nil {
@@ -102,13 +112,15 @@ func graphACf() {
 		"-snow-1m",
 		"-w600",
 		"-h300",
-		"-ACFreqmency",
+		"-tACFreqmency",
 		"-vHz",
 		"-E",
 		"DEF:ACfi=db/ACf.rrd:Fi:AVERAGE",
 		"DEF:ACfo=db/ACf.rrd:Fo:AVERAGE",
 		"LINE1:ACfi#0000FF:In",
 		"LINE1:ACfo#00FF00:Out",
+		"GPRINT:ACfi:LAST:Current\\:%4.1lf",
+		"GPRINT:ACfo:LAST:Current\\:%4.1lf",
 	)
 	err = ACf1mcom.Run()
 	if err != nil {
@@ -120,13 +132,15 @@ func graphACf() {
 		"-snow-1y",
 		"-w600",
 		"-h300",
-		"-ACFreqmency",
+		"-tACFreqmency",
 		"-vHz",
 		"-E",
 		"DEF:ACfi=db/ACf.rrd:Fi:AVERAGE",
 		"DEF:ACfo=db/ACf.rrd:Fo:AVERAGE",
 		"LINE1:ACfi#0000FF:In",
 		"LINE1:ACfo#00FF00:Out",
+		"GPRINT:ACfi:LAST:Current\\:%4.1lf",
+		"GPRINT:ACfo:LAST:Current\\:%4.1lf",
 	)
 	err = ACf1ycom.Run()
 	if err != nil {
@@ -138,13 +152,15 @@ func graphACf() {
 		"-snow-2y",
 		"-w600",
 		"-h300",
-		"-ACFreqmency",
+		"-tACFreqmency",
 		"-vHz",
 		"-E",
 		"DEF:ACfi=db/ACf.rrd:Fi:AVERAGE",
 		"DEF:ACfo=db/ACf.rrd:Fo:AVERAGE",
 		"LINE1:ACfi#0000FF:In",
 		"LINE1:ACfo#00FF00:Out",
+		"GPRINT:ACfi:LAST:Current\\:%4.1lf",
+		"GPRINT:ACfo:LAST:Current\\:%4.1lf",
 	)
 	err = ACf2ycom.Run()
 	if err != nil {

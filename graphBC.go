@@ -19,6 +19,8 @@ func graphBC() {
 		"DEF:BCd=db/BC.rrd:Bd:AVERAGE",
 		"LINE1:BCc#0000FF:Charge",
 		"LINE1:BCd#FF0000:Discharge",
+		"GPRINT:BCc:LAST:Current\\:%4.0lf",
+		"GPRINT:BCd:LAST:Current\\:%4.0lf",
 	)
 	err := BC30mcom.Run()
 	if err != nil {
@@ -37,6 +39,8 @@ func graphBC() {
 		"DEF:BCd=db/BC.rrd:Bd:AVERAGE",
 		"LINE1:BCc#0000FF:Charge",
 		"LINE1:BCd#FF0000:Discharge",
+		"GPRINT:BCc:LAST:Current\\:%4.0lf",
+		"GPRINT:BCd:LAST:Current\\:%4.0lf",
 	)
 	err = BC1hcom.Run()
 	if err != nil {
@@ -55,6 +59,8 @@ func graphBC() {
 		"DEF:BCd=db/BC.rrd:Bd:AVERAGE",
 		"LINE1:BCc#0000FF:Charge",
 		"LINE1:BCd#FF0000:Discharge",
+		"GPRINT:BCc:LAST:Current\\:%4.0lf",
+		"GPRINT:BCd:LAST:Current\\:%4.0lf",
 	)
 	err = BC3hcom.Run()
 	if err != nil {
@@ -73,6 +79,8 @@ func graphBC() {
 		"DEF:BCd=db/BC.rrd:Bd:AVERAGE",
 		"LINE1:BCc#0000FF:Charge",
 		"LINE1:BCd#FF0000:Discharge",
+		"GPRINT:BCc:LAST:Current\\:%4.0lf",
+		"GPRINT:BCd:LAST:Current\\:%4.0lf",
 	)
 	err = BC1dcom.Run()
 	if err != nil {
@@ -91,6 +99,8 @@ func graphBC() {
 		"DEF:BCd=db/BC.rrd:Bd:AVERAGE",
 		"LINE1:BCc#0000FF:Charge",
 		"LINE1:BCd#FF0000:Discharge",
+		"GPRINT:BCc:LAST:Current\\:%4.0lf",
+		"GPRINT:BCd:LAST:Current\\:%4.0lf",
 	)
 	err = BC1wcom.Run()
 	if err != nil {
@@ -109,6 +119,8 @@ func graphBC() {
 		"DEF:BCd=db/BC.rrd:Bd:AVERAGE",
 		"LINE1:BCc#0000FF:Charge",
 		"LINE1:BCd#FF0000:Discharge",
+		"GPRINT:BCc:LAST:Current\\:%4.0lf",
+		"GPRINT:BCd:LAST:Current\\:%4.0lf",
 	)
 	err = BC1mcom.Run()
 	if err != nil {
@@ -127,6 +139,8 @@ func graphBC() {
 		"DEF:BCd=db/BC.rrd:Bd:AVERAGE",
 		"LINE1:BCc#0000FF:Charge",
 		"LINE1:BCd#FF0000:Discharge",
+		"GPRINT:BCc:LAST:Current\\:%4.0lf",
+		"GPRINT:BCd:LAST:Current\\:%4.0lf",
 	)
 	err = BC1ycom.Run()
 	if err != nil {
@@ -145,6 +159,8 @@ func graphBC() {
 		"DEF:BCd=db/BC.rrd:Bd:AVERAGE",
 		"LINE1:BCc#0000FF:Charge",
 		"LINE1:BCd#FF0000:Discharge",
+		"GPRINT:BCc:LAST:Current\\:%4.0lf",
+		"GPRINT:BCd:LAST:Current\\:%4.0lf",
 	)
 	err = BC2ycom.Run()
 	if err != nil {

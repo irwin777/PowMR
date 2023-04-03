@@ -19,6 +19,8 @@ func graphACv() {
 		"DEF:ACvo=db/ACv.rrd:Vo:AVERAGE",
 		"LINE1:ACvi#0000FF:In",
 		"LINE1:ACvo#00FF00:Out",
+		"GPRINT:ACvi:LAST:Current\\:%4.1lf",
+		"GPRINT:ACvo:LAST:Current\\:%4.1lf",
 	)
 	err := ACv30mcom.Run()
 	if err != nil {
@@ -37,6 +39,8 @@ func graphACv() {
 		"DEF:ACvo=db/ACv.rrd:Vo:AVERAGE",
 		"LINE1:ACvi#0000FF:In",
 		"LINE1:ACvo#00FF00:Out",
+		"GPRINT:ACvi:LAST:Current\\:%4.1lf",
+		"GPRINT:ACvo:LAST:Current\\:%4.1lf",
 	)
 	err = ACv1hcom.Run()
 	if err != nil {
@@ -55,6 +59,8 @@ func graphACv() {
 		"DEF:ACvo=db/ACv.rrd:Vo:AVERAGE",
 		"LINE1:ACvi#0000FF:In",
 		"LINE1:ACvo#00FF00:Out",
+		"GPRINT:ACvi:LAST:Current\\:%4.1lf",
+		"GPRINT:ACvo:LAST:Current\\:%4.1lf",
 	)
 	err = ACv3hcom.Run()
 	if err != nil {
@@ -73,6 +79,8 @@ func graphACv() {
 		"DEF:ACvo=db/ACv.rrd:Vo:AVERAGE",
 		"LINE1:ACvi#0000FF:In",
 		"LINE1:ACvo#00FF00:Out",
+		"GPRINT:ACvi:LAST:Current\\:%4.1lf",
+		"GPRINT:ACvo:LAST:Current\\:%4.1lf",
 	)
 	err = ACv1dcom.Run()
 	if err != nil {
@@ -91,6 +99,8 @@ func graphACv() {
 		"DEF:ACvo=db/ACv.rrd:Vo:AVERAGE",
 		"LINE1:ACvi#0000FF:In",
 		"LINE1:ACvo#00FF00:Out",
+		"GPRINT:ACvi:LAST:Current\\:%4.1lf",
+		"GPRINT:ACvo:LAST:Current\\:%4.1lf",
 	)
 	err = ACv1wcom.Run()
 	if err != nil {
@@ -109,6 +119,8 @@ func graphACv() {
 		"DEF:ACvo=db/ACv.rrd:Vo:AVERAGE",
 		"LINE1:ACvi#0000FF:In",
 		"LINE1:ACvo#00FF00:Out",
+		"GPRINT:ACvi:LAST:Current\\:%4.1lf",
+		"GPRINT:ACvo:LAST:Current\\:%4.1lf",
 	)
 	err = ACv1mcom.Run()
 	if err != nil {
@@ -127,6 +139,8 @@ func graphACv() {
 		"DEF:ACvo=db/ACv.rrd:Vo:AVERAGE",
 		"LINE1:ACvi#0000FF:In",
 		"LINE1:ACvo#00FF00:Out",
+		"GPRINT:ACvi:LAST:Current\\:%4.1lf",
+		"GPRINT:ACvo:LAST:Current\\:%4.1lf",
 	)
 	err = ACv1ycom.Run()
 	if err != nil {
@@ -145,6 +159,8 @@ func graphACv() {
 		"DEF:ACvo=db/ACv.rrd:Vo:AVERAGE",
 		"LINE1:ACvi#0000FF:In",
 		"LINE1:ACvo#00FF00:Out",
+		"GPRINT:ACvi:LAST:Current\\:%4.1lf",
+		"GPRINT:ACvo:LAST:Current\\:%4.1lf",
 	)
 	err = ACv2ycom.Run()
 	if err != nil {
