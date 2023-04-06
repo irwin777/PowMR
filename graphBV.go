@@ -11,12 +11,13 @@ func graphBv() {
 		"-enow",
 		"-snow-30m",
 		"-w600",
-		"-h300",
+		"-h200",
 		"-tBatteryVoltage",
 		"-vV",
 		"DEF:Bv=db/Bv.rrd:Bv:AVERAGE",
 		"AREA:Bv#00FF00:V",
-		"GPRINT:Bv:LAST:Current\\:%4.1lf%s",
+		"HRULE:26.6#FF0000:26.6",
+		"GPRINT:Bv:LAST:Current\\:%lg",
 	)
 	err := Bv30mcom.Run()
 	if err != nil {
@@ -27,12 +28,13 @@ func graphBv() {
 		"-enow",
 		"-snow-1h",
 		"-w600",
-		"-h300",
+		"-h200",
 		"-tBatteryVoltage",
 		"-vV",
 		"DEF:Bv=db/Bv.rrd:Bv:AVERAGE",
 		"AREA:Bv#00FF00:V",
-		"GPRINT:Bv:LAST:Current\\:%4.1lf%s",
+		"HRULE:26.6#FF0000:26.6",
+		"GPRINT:Bv:LAST:Current\\:%lg",
 	)
 	err = Bv1hcom.Run()
 	if err != nil {
@@ -43,12 +45,13 @@ func graphBv() {
 		"-enow",
 		"-snow-3h",
 		"-w600",
-		"-h300",
+		"-h200",
 		"-tBatteryVoltage",
 		"-vV",
 		"DEF:Bv=db/Bv.rrd:Bv:AVERAGE",
 		"AREA:Bv#00FF00:V",
-		"GPRINT:Bv:LAST:Current\\:%4.1lf%s",
+		"HRULE:26.6#FF0000:26.6",
+		"GPRINT:Bv:LAST:Current\\:%lg",
 	)
 	err = Bv3hcom.Run()
 	if err != nil {
@@ -59,12 +62,13 @@ func graphBv() {
 		"-enow",
 		"-snow-1d",
 		"-w600",
-		"-h300",
+		"-h200",
 		"-tBatteryVoltage",
 		"-vV",
 		"DEF:Bv=db/Bv.rrd:Bv:AVERAGE",
 		"AREA:Bv#00FF00:V",
-		"GPRINT:Bv:LAST:Current\\:%4.1lf%s",
+		"HRULE:26.6#FF0000:26.6",
+		"GPRINT:Bv:LAST:Current\\:%lg",
 	)
 	err = Bv1dcom.Run()
 	if err != nil {
@@ -75,12 +79,13 @@ func graphBv() {
 		"-enow",
 		"-snow-1w",
 		"-w600",
-		"-h300",
+		"-h200",
 		"-tBatteryVoltage",
 		"-vV",
 		"DEF:Bv=db/Bv.rrd:Bv:AVERAGE",
 		"AREA:Bv#00FF00:V",
-		"GPRINT:Bv:LAST:Current\\:%4.1lf%s",
+		"HRULE:26.6#FF0000:26.6",
+		"GPRINT:Bv:LAST:Current\\:%lg",
 	)
 	err = Bv1wcom.Run()
 	if err != nil {
@@ -91,12 +96,13 @@ func graphBv() {
 		"-enow",
 		"-snow-1m",
 		"-w600",
-		"-h300",
+		"-h200",
 		"-tBatteryVoltage",
 		"-vV",
 		"DEF:Bv=db/Bv.rrd:Bv:AVERAGE",
 		"AREA:Bv#00FF00:V",
-		"GPRINT:Bv:LAST:Current\\:%4.1lf%s",
+		"HRULE:26.6#FF0000:26.6",
+		"GPRINT:Bv:LAST:Current\\:%lg",
 	)
 	err = Bv1mcom.Run()
 	if err != nil {
@@ -107,12 +113,13 @@ func graphBv() {
 		"-enow",
 		"-snow-1y",
 		"-w600",
-		"-h300",
+		"-h200",
 		"-tBatteryVoltage",
 		"-vV",
 		"DEF:Bv=db/Bv.rrd:Bv:AVERAGE",
 		"AREA:Bv#00FF00:V",
-		"GPRINT:Bv:LAST:Current\\:%4.1lf%s",
+		"HRULE:26.6#FF0000:26.6",
+		"GPRINT:Bv:LAST:Current\\:%lg",
 	)
 	err = Bv1ycom.Run()
 	if err != nil {
@@ -123,12 +130,13 @@ func graphBv() {
 		"-enow",
 		"-snow-2y",
 		"-w600",
-		"-h300",
+		"-h200",
 		"-tBatteryVoltage",
 		"-vV",
 		"DEF:Bv=db/Bv.rrd:Bv:AVERAGE",
 		"AREA:Bv#00FF00:V",
-		"GPRINT:Bv:LAST:Current\\:%4.1lf%s",
+		"HRULE:26.6#FF0000:26.6",
+		"GPRINT:Bv:LAST:Current\\:%lg",
 	)
 	err = Bv2ycom.Run()
 	if err != nil {
