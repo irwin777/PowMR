@@ -263,7 +263,7 @@ func main() {
 }
 
 func getData(rq string) (string, error) {
-	log.Println("getData")
+	//log.Println("getData")
 	config := serial.Config{
 		Name:     "/dev/ttyUSB0",
 		Baud:     2400,
@@ -300,12 +300,12 @@ func getData(rq string) (string, error) {
 		return "", fmt.Errorf("CRC Error")
 	}
 	dd := d[1:]
-	log.Printf("Data % X\n", dd)
+	//log.Printf("Data % X\n", dd)
 	return string(dd), nil
 }
 
 func getStatus() {
-	log.Println("getStatus")
+	//log.Println("getStatus")
 	/*
 	   'QPI'		=> "515049beac0d", ##  Device Protocol ID Inquiry
 	   	'QID'		=> "514944d6ea0d", ## Device Serial Number Inquiry
@@ -330,15 +330,7 @@ func getStatus() {
 	   	'QMOD'		=> "514d4f4449c10d" ## Device Mode inquiry
 	*/
 
-	rcv, err := getData("QMOD")
-	if err != nil {
-		log.Println(err)
-		return
-	}
-	Mode = rcv
-	log.Println("Mode -", Mode)
-
-	rcv, err = getData("QPIGS")
+	rcv, err := getData("QPIGS")
 	if err != nil {
 		log.Println(err)
 		rcv, err = getData("QPIGS")
@@ -439,4 +431,33 @@ func getStatus() {
 	if err != nil {
 		log.Println(err)
 	}
+
+	rcv, err = getData("QMOD")
+	if err != nil {
+		log.Println(err)
+		return
+	}
+	Mode = rcv
+	log.Println("Mode -", Mode)
+
+	// rcv, err = getData("POP01")
+	// if err != nil {
+	// 	log.Println(err)
+	// 	return
+	// }
+	// log.Println("POP -", rcv)
+
+	// rcv, err = getData("PDjjj")
+	// if err != nil {
+	// 	log.Println(err)
+	// 	return
+	// }
+	// log.Println("PDJ -", rcv)
+
+	rcv, err = getData("QPIRI")
+	if err != nil {
+		log.Println(err)
+		return
+	}
+	log.Println("QPIRI -", rcv)
 }
